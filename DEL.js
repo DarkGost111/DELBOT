@@ -3,12 +3,6 @@ const client = new Discord.Client();
 const moment = require("moment");
 const yt = require('ytdl-core');
 const fs = require("fs");
-const { Client, Util } = require('discord.js');
-const getYoutubeID = require('get-youtube-id');
-const fetchVideoInfo = require('youtube-info');
-const YouTube = require('simple-youtube-api');
-const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
-const queue = new Map();
 const prefix = "D";
 const PREFIX = "D";
 client.on('ready', () => {
@@ -279,25 +273,10 @@ Discord API: ${client.ping.toFixed(0)} ms\`\`\``);
     }
 });
 
-client.on('message', message => {
-  if (message.author.bot) return;
-  if (!message.content.startsWith(prefix)) return;
-  let command = message.content.split(" ")[0];
-  command = command.slice(prefix.length);
 
-  let args = message.content.split(" ").slice(1);
-
-if (command == "embed") {
-
-var embed = new Discord.RichEmbed()
-.setTitle(`${args}`)
-message.channel.sendEmbed(embed);    
-message.delete();
-  }
-
-
-
-});
+  
+  
+  
 
 client.on('message', message => {
   if (message.author.bot) return;
@@ -503,11 +482,11 @@ message.channel.send("**Dbc2 <message>**");
 return;
 }
 message.guild.members.forEach(m => {
-   if(!message.member.hasPermission('ADMINISTRATOR')) return;
+  if(!message.guild.members.get(message.author.id).hasPermission('ADMINISTRATOR')) return message.channel.send('انت لا تمتلك صلاحية ADMINISTRATOR')
 var embed = new Discord.RichEmbed()   
-.addField("Server", message.guild.name, true)
-.addField("sender", message.author.tag, true)
-.addField("Message", `${args}`, true)
+.addField("السيرفر", message.guild.name, true)
+.addField("المرسل", message.author.tag, true)
+.addField("الرسالة", `${args}`, true)
 m.sendEmbed(embed);
  
 });
@@ -616,7 +595,6 @@ msgS.react("❌")
 
 
  
-
 
 
 client.on("message", msg => {
@@ -1403,6 +1381,25 @@ https://discord.gg/E8fquwg
 }
 });
 
+const ytdl = require("ytdl-core");
+const { Client, Util } = require('discord.js');
+const getYoutubeID = require('get-youtube-id');
+const fetchVideoInfo = require('youtube-info');
+const YouTube = require('simple-youtube-api');
+const youtube = new YouTube("AIzaSyAdORXg7UZUo7sePv97JyoDqtQVi3Ll0b8");
+const queue = new Map();
+
+ 
+/*
+البكجآت
+npm install discord.js
+npm install ytdl-core
+npm install get-youtube-id
+npm install youtube-info
+npm install simple-youtube-api
+npm install queue
+*/
+ 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
