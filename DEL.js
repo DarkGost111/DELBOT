@@ -783,7 +783,7 @@ client.on("ready", () => {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('497428338223087617').roles.find("name", "Owner").setColor("RANDOM");
+    client.guilds.get('497428338223087617').roles.find("name", "⌠Owner⌡").setColor("RANDOM");
   };
   setInterval(lol, 1600);
 });
