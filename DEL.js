@@ -96,6 +96,11 @@ ${prefix}credits < Mention > تعطي العضو الي تمنشنه كريدت
 
 لعرض النقاط الخاصة بك - نقاطي
 ====><=====
+=>> Music Cmd <<=
+Dplay < Name > Or < URL >
+Dstop if you want stop the bot and Disconnect From Room
+Dskip If You Want Skip This Song
+====><=====
 =>> Public Cmd <<=
 **`)
 }
