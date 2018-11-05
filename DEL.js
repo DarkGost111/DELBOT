@@ -1701,7 +1701,7 @@ function play(guild, song) {
 client.on('message' , message => {
   if(message.author.bot) return;
 
-  if(message.content === "اكس او") {
+  if(message.content.startsWith(prefix + "tic")) {
  let array_of_mentions = message.mentions.users.array();
   let symbols = [':o:', ':heavy_multiplication_x:'] 
   var grid_message;
@@ -1755,7 +1755,7 @@ client.on('message' , message => {
     .catch(console.error);
   }
   else {
-    message.reply(`_Beldum Beldum_ :anger: \`(Use it like this: ${prefix}tictactoe @player1 @player2)\``)
+    message.reply(`_Beldum Beldum_ :anger: \`(Type This : ${prefix}tictactoe @Mention You @Mention Member)\``)
     .then(console.log("Successful error reply"))
     .catch(console.error);
   }
