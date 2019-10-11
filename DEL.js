@@ -3,11 +3,11 @@ const client = new Discord.Client();
 const moment = require("moment");
 const yt = require('ytdl-core');
 const fs = require("fs");
-const prefix = "D";
-const PREFIX = "D";
+const prefix = "!";
+const PREFIX = "!";
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`Dhelp | Dinv | Guilds (${client.guilds.size}) `,"http://twitch.tv/S-F")
+client.user.setGame(`!help | !inv | Guilds (${client.guilds.size}) `,"http://twitch.tv/darkghostproo")
 });
 
 client.on("message", msg => {
@@ -94,7 +94,7 @@ ${prefix}credits < Mention > تعطي العضو الي تمنشنه كريدت
 
 لعبه كت تويت - كت تويت
 
-Dtic - لعبه اكس او
+!tic - لعبه اكس او
 
 لعرض النقاط الخاصة بك - نقاطي
 ====><=====
@@ -214,10 +214,10 @@ msg.channel.sendEmbed(embed24)
  });
 
 client.on("message", msg => {
-if(msg.content === "Dinv") {
+if(msg.content === "!inv") {
 var embed = new Discord.RichEmbed()
 .setTitle("Click Here To Invite Bot")
-.setURL("https://discordapp.com/oauth2/authorize?client_id=505402688675250179&permissions=2146958583&scope=bot")
+.setURL("https://discordapp.com/oauth2/authorize?client_id=632217753750732802&permissions=2080374975&scope=bot")
 msg.channel.sendEmbed(embed);
 }
 });
@@ -226,14 +226,14 @@ client.on("message", msg => {
 if(msg.content === "Dsupport") {
 var embed = new Discord.RichEmbed()
 .setTitle("Click Here To Join a server support Bot")
-.setURL("https://discord.gg/rtHJ8qk")
-.addField(`or`,`https://discord.gg/rtHJ8qk`,true)
+.setURL("https://discord.gg/9AuMqM7")
+.addField(`or`,`https://discord.gg/9AuMqM7`,true)
 msg.channel.sendEmbed(embed);
 }
 });
 
 client.on("message", msg => {
-    if (msg.content === "Did") {    
+    if (msg.content === "!id") {    
 let embed = new Discord.RichEmbed()
      .setColor("RANDOM")
      .setAuthor(msg.author.username, msg.author.avatarURL)
@@ -271,7 +271,7 @@ client.on('message', message =>{
 });
 
 client.on('message', message =>{
-    if(message.content === 'Dping'){
+    if(message.content === '!ping'){
 let start = Date.now(); message.channel.send('pong').then(message => { 
 message.edit(`\`\`\`js
 Time taken: ${Date.now() - start} ms
@@ -307,7 +307,7 @@ message.channel.send(args.join("  "))
 
 client.on("message", msg => {
 if(msg.content === "Downerbot") {
-msg.channel.send(`***__DEL.25#1406__***`).then(message => {
+msg.channel.send(`***__! 𝔻𝔸ℝ𝕂𝔾ℍ𝕆𝕊𝕋#0001__***`).then(message => {
 message.delete(1500);
 })
 }
@@ -507,7 +507,7 @@ client.on('message', message => {
    
   
  
-  if (message.content.startsWith('Dbc1')) {
+  if (message.content.startsWith('!bc1')) {
           if (!args[0]) {
 message.channel.send("**Dbc1 <message>**");
 return;
@@ -626,7 +626,7 @@ men.sendMessage(embed);
 client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
-if (message.content.startsWith('Dbc3')){
+if (message.content.startsWith('!bc3')){
  if (message.author.id !== '377727851190943744') return message.reply('** هذا الأمر قفط لصاحب البوت و شكراًً **')
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
@@ -727,21 +727,21 @@ client.on('message', function(message) {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('505404592842866688').roles.find("name", "Founder").setColor("RANDOM");
+    client.guilds.get('530972822722445312').roles.find("name", "Founder").setColor("RANDOM");
   };
   setInterval(lol, 1600 );
 });
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('505404592842866688').roles.find("name", "Support").setColor("RANDOM");
+    client.guilds.get('530972822722445312').roles.find("name", "Support").setColor("RANDOM");
   };
   setInterval(lol, 1600 );
 });
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('505404592842866688').roles.find("name", "Developer").setColor("RANDOM");
+    client.guilds.get('530972822722445312').roles.find("name", "Developer").setColor("RANDOM");
   };
   setInterval(lol, 1600 );
 });
@@ -753,28 +753,28 @@ client.on("ready", () => {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('505404592842866688').roles.find("name", "ADMINISTRATOR").setColor("RANDOM");
+    client.guilds.get('530972822722445312').roles.find("name", "ADMINISTRATOR").setColor("RANDOM");
   };
   setInterval(lol, 1600);
 });
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('505404592842866688').roles.find("name", "Original-Bot").setColor("RANDOM");
+    client.guilds.get('530972822722445312').roles.find("name", "Original-Bot").setColor("RANDOM");
   };
   setInterval(lol, 1600);
 });
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('505404592842866688').roles.find("name", "Rainbow").setColor("RANDOM");
+    client.guilds.get('530972822722445312').roles.find("name", "Rainbow").setColor("RANDOM");
   };
   setInterval(lol, 1600);
 });
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('497428338223087617').roles.find("name", "⌠Owner⌡").setColor("RANDOM");
+    client.guilds.get('497428338223087617').roles.find("name", "❖ | Founder | 👑 ").setColor("RANDOM");
   };
   setInterval(lol, 1600);
 });
@@ -788,7 +788,7 @@ client.on("ready", () => {
 
 client.on("ready", () => {
   function lol() {
-    client.guilds.get('498818271362023444').roles.find("name", "『DarkClan』").setColor("RANDOM");
+    client.guilds.get('498818271362023444').roles.find("name", "❖ |  𝙴𝚇𝙴𝙲𝚄𝚃𝙸𝚅𝙴 ✨").setColor("RANDOM");
   };
   setInterval(lol, 1600);
 });
@@ -797,7 +797,7 @@ client.on("ready", () => {
 
 
 client.on('message', DEL => {// By DEL || هاشم
-if(DEL.content === 'Dr') {
+if(DEL.content === '!r') {
   var channel =DEL.guild.channels.find('name', 'rules')
 if (!channel) return;
   channel.send(`
@@ -1154,7 +1154,7 @@ client.on('message', message => {
 
 
 client.on('message', message => {
-    if (message.content === "Drooms") {
+    if (message.content === "!rooms") {
                       if (!message.guild) return;
 
         var channels = message.guild.channels.map(channels => `${channels.name}, `).join(' ')
@@ -1169,7 +1169,7 @@ client.on('message', message => {
 });
 
 client.on("message", (message) => {
-if (message.content.startsWith("Dcv")) {
+if (message.content.startsWith("!cv")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'voice');
@@ -1179,7 +1179,7 @@ if (message.content.startsWith("Dcv")) {
 });
 
 client.on("message", (message) => {
-if (message.content.startsWith("Dct")) {
+if (message.content.startsWith("!ct")) {
             if (!message.member.hasPermission('MANAGE_CHANNELS')) return message.reply("You Don't Have `MANAGE_CHANNELS` Premissions ");
         let args = message.content.split(" ").slice(1);
     message.guild.createChannel(args.join(' '), 'text');
@@ -1381,9 +1381,9 @@ client.on("message", msg => {
 if(msg.content === "رابط") {
 msg.channel.send(`
 اكثر سيرفر الاونر يكون فيه
-https://discord.gg/DxHy92h
+https://discord.gg/9AuMqM7
 سيرفر السبورت
-https://discord.gg/E8fquwg
+https://discord.gg/9AuMqM7
 `)
 }
 });
